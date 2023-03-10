@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kimi no Nawa: "
+        android:textSize="32sp"
+        android:fontFamily="sans-serif-light"
+        android:textAlignment="center"
+        android:layout_marginBottom="@dimen/far"
+                  />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="@dimen/high"
+        app:spanCount="3"
+        tools:listitem="@layout/item_menu"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
