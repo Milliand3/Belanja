@@ -5,29 +5,26 @@ import com.google.gson.annotations.SerializedName
 data class BarangItem(
 
 	@field:SerializedName("id_barang")
-	val idBarang: String? = null,
+	var idBarang: Int? = null,
 
 	@field:SerializedName("harga_beli")
-	val hargaBeli: String? = null,
+	var hargaBeli: Double? = null,
 
 	@field:SerializedName("nama_barang")
-	val namaBarang: String? = null,
+	var namaBarang: String? = null,
 
 	@field:SerializedName("kategori")
-	val kategori: String? = null,
+	var kategori: String? = null,
 
 	@field:SerializedName("id_user")
-	val idUser: String? = null,
-
-	@field:SerializedName("stok")
-	val stok: String? = null,
+	var idUser: Int? = null,
 
 	@field:SerializedName("created_date")
-	val createdDate: String? = null,
+	var createdDate: String? = null,
 
 	@field:SerializedName("harga_jual")
-	val hargaJual: String? = null,
+	var hargaJual: Double? = null,
 
 	@field:SerializedName("barcode")
-	val barcode: String? = null
-)
+	var barcode: String? = null
+):java.io.Serializable

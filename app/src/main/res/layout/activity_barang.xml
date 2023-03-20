@@ -14,17 +14,18 @@
         tools:listitem="@layout/item_data_barang"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/brAddDaaBarang"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:clickable="true"
-        android:layout_margin="@dimen/high"
-        android:src="@drawable/ic_add_white"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/high"
+        android:layout_marginTop="@dimen/high"
+        android:layout_marginEnd="@dimen/high"
+        android:layout_marginBottom="@dimen/high"
+        android:src="@drawable/ic_add_white" />
 
 
 </RelativeLayout>

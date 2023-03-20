@@ -5,9 +5,11 @@ import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.activity.barang.BarangActivity
+import com.example.myapplication.activity.login.LoginActivity
 import com.example.myapplication.activity.penjualan.PenjualanActivity
 import com.example.myapplication.base.BaseActivity
 import com.example.penjualan.MenuAdapter
@@ -19,7 +21,7 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         initActionButton()
-        findViewById<TextView>(R.id.tvWelcome).text = "Kimi no Nawa ${user?.username}"
+        findViewById<TextView>(R.id.tvWelcome).text = "Welcome ${user?.username}"
 
     }
 
@@ -38,7 +40,9 @@ class MainActivity : BaseActivity() {
 
     }
     private fun openDataBarang() {
-        val intent = Intent(this, BarangActivity::class.java)
+        val intent = Intent(this, BarangActivity::class.java).apply {
+            putExtra(TAGS.USER, user)
+        }
         startActivity(intent)
     }
     private fun openDataPenjualan(){
@@ -49,5 +53,13 @@ class MainActivity : BaseActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main,menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        finish()
+        val intent = Intent(this,LoginActivity::class.java)
+        startActivity(intent)
+
+        return super.onOptionsItemSelected(item)
     }
 }

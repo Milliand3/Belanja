@@ -12,7 +12,7 @@
         android:id="@+id/tvWelcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kimi no Nawa: "
+        android:text="Welcome : "
         android:textSize="32sp"
         android:fontFamily="sans-serif-light"
         android:textAlignment="center"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/high"
-        app:spanCount="3"
+        app:spanCount="2"
         tools:listitem="@layout/item_menu"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         />

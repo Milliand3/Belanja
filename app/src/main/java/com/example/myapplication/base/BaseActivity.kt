@@ -20,7 +20,7 @@ open class BaseActivity : AppCompatActivity() {
         val intent = activity.intent.getSerializableExtra("user")
 
         if (intent == null) {
-            Toast.makeText(activity, "ANDA BELUM LOGIN BRO", Toast.LENGTH_SHORT)
+            Toast.makeText(activity, "ANDA BELUM LOGIN BRO", Toast.LENGTH_SHORT).show()
             activity.finish()
         } else {
             user = intent as User
